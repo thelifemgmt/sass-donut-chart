@@ -1,0 +1,158 @@
+/*********************************
+Sass Donut Mixin
+Written by: Sean Stopnik
+Email: thelifemgmt@gmail.com
+*********************************/
+.donut-chart {
+  position: relative;
+  font-family: sans-serif;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.donut-chart .slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.donut-chart .chart-center {
+  position: absolute;
+  border-radius: 50%;
+}
+.donut-chart .chart-center span {
+  display: block;
+  text-align: center;
+}
+
+.donut-chart.chart1 {
+  width: 200px;
+  height: 200px;
+  background: #e1e1e1;
+}
+.donut-chart.chart1 .slice.one {
+  clip: rect(0 200px 100px 0);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  background: #50c690;
+}
+.donut-chart.chart1 .slice.two {
+  clip: rect(0 100px 200px 0);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  background: #50c690;
+}
+.donut-chart.chart1 .chart-center {
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 180px;
+  background: white;
+}
+.donut-chart.chart1 .chart-center span {
+  font-size: 40px;
+  line-height: 180px;
+  color: #50c690;
+}
+.donut-chart.chart1 .chart-center span:after {
+  content: "75%";
+}
+
+.donut-chart.chart2 {
+  width: 200px;
+  height: 200px;
+  background: #e1e1e1;
+}
+.donut-chart.chart2 .slice.one {
+  clip: rect(0 200px 100px 0);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  background: #48b2c1;
+}
+.donut-chart.chart2 .slice.two {
+  clip: rect(0 100px 200px 0);
+  -webkit-transform: rotate(324deg);
+  transform: rotate(324deg);
+  background: #48b2c1;
+}
+.donut-chart.chart2 .chart-center {
+  top: 25px;
+  left: 25px;
+  width: 150px;
+  height: 150px;
+  background: white;
+}
+.donut-chart.chart2 .chart-center span {
+  font-size: 40px;
+  line-height: 150px;
+  color: #48b2c1;
+}
+.donut-chart.chart2 .chart-center span:after {
+  content: "90%";
+}
+
+.donut-chart.chart3 {
+  width: 120px;
+  height: 120px;
+  background: #353535;
+}
+.donut-chart.chart3 .slice.one {
+  clip: rect(0 120px 60px 0);
+  -webkit-transform: rotate(144deg);
+  transform: rotate(144deg);
+  background: #e1e1e1;
+}
+.donut-chart.chart3 .slice.two {
+  clip: rect(0 60px 120px 0);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  background: #e1e1e1;
+}
+.donut-chart.chart3 .chart-center {
+  top: 5px;
+  left: 5px;
+  width: 110px;
+  height: 110px;
+  background: white;
+}
+.donut-chart.chart3 .chart-center span {
+  font-size: 40px;
+  line-height: 110px;
+  color: #353535;
+}
+.donut-chart.chart3 .chart-center span:after {
+  content: "15%";
+}
+
+.donut-chart.chart4 {
+  width: 240px;
+  height: 240px;
+  background: #f26a4a;
+}
+.donut-chart.chart4 .slice.one {
+  clip: rect(0 240px 120px 0);
+  -webkit-transform: rotate(230.4deg);
+  transform: rotate(230.4deg);
+  background: #e1e1e1;
+}
+.donut-chart.chart4 .slice.two {
+  clip: rect(0 120px 240px 0);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  background: #e1e1e1;
+}
+.donut-chart.chart4 .chart-center {
+  top: 15px;
+  left: 15px;
+  width: 210px;
+  height: 210px;
+  background: white;
+}
+.donut-chart.chart4 .chart-center span {
+  font-size: 60px;
+  line-height: 210px;
+  color: #f26a4a;
+}
+.donut-chart.chart4 .chart-center span:after {
+  content: "39%";
+}

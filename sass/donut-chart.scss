@@ -1,0 +1,102 @@
+/*********************************
+Sass Donut Mixin
+Written by: Sean Stopnik
+Email: thelifemgmt@gmail.com
+*********************************/
+
+
+// Donut Chart Mixin
+.donut-chart {
+	position: relative;
+	font-family: sans-serif;
+	border-radius: 50%;
+	overflow: hidden;
+	
+	.slice {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.chart-center {
+		position: absolute;
+		border-radius: 50%;
+	
+		span {
+			display: block;
+			text-align: center;
+		}
+	}
+}
+
+
+@mixin donut-chart($name, $perc, $size, $width, $base, $center, $color, $textColor: $color, $textSize: 40px) {
+	
+	// vars
+	$color2: $color;
+	$deg: ($perc/100*360)+deg;
+	$deg1: 90deg;
+	$deg2: $deg;
+	
+	// If percentage is less than 50%
+	@if $perc < 50 {
+		$color2: $color;
+		$deg1: ($perc/100*360+90)+deg;
+		$deg2: 0deg;
+	}
+	
+	.donut-chart {
+		
+		&#{$name} {
+		width: $size;
+		height: $size;
+		background: $base;
+		
+		.slice {
+			&.one {
+				clip: rect(0 $size $size/2 0);
+				-webkit-transform: rotate($deg1);
+				transform: rotate($deg1);
+				background: $color;
+			}
+			
+			&.two {
+				clip: rect(0 $size/2 $size 0);
+				-webkit-transform: rotate($deg2);
+				transform: rotate($deg2);
+				background: $color2;
+			}
+		}
+	
+		.chart-center {
+			top: $width;
+			left: $width;
+			width: $size - ($width * 2);
+			height: $size - ($width * 2);
+			background: $center;
+	
+				span {
+					font-size: $textSize;
+					line-height: $size - ($width * 2);
+					color: $textColor;
+	
+					&:after {
+						content: '#{$perc}%';
+					}
+				}
+			}
+		}
+	}
+} // mixin
+
+
+// Create Charts
+@include donut-chart('.chart1', 75, 200px, 10px, #e1e1e1, #fff, #50c690);
+
+@include donut-chart('.chart2', 90, 200px, 25px, #e1e1e1, #fff, #48b2c1);
+
+@include donut-chart('.chart3', 15, 120px, 5px, #353535, #fff, #e1e1e1, #353535);
+
+@include donut-chart('.chart4', 39, 240px, 15px, #f26a4a, #fff, #e1e1e1, #f26a4a, 60px);

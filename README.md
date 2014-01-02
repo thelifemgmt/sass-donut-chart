@@ -1,4 +1,4 @@
-sass-donut-chart
+Sass Donut Chart
 ================
 
-Sass Donut Chart
+Simple Donut Chart scss mixin. Still in development.
