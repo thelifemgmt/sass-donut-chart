@@ -36,13 +36,16 @@ Email: thelifemgmt@gmail.com
 	
 	// vars
 	$color2: $color;
+	$base2: $base;
 	$deg: ($perc/100*360)+deg;
 	$deg1: 90deg;
 	$deg2: $deg;
 	
 	// If percentage is less than 50%
 	@if $perc < 50 {
-		$color2: $color;
+		$base: $color;
+		$color: $base2;
+		$color2: $base2;
 		$deg1: ($perc/100*360+90)+deg;
 		$deg2: 0deg;
 	}
@@ -97,6 +100,6 @@ Email: thelifemgmt@gmail.com
 
 @include donut-chart('.chart2', 90, 200px, 25px, #e1e1e1, #fff, #48b2c1);
 
-@include donut-chart('.chart3', 15, 120px, 5px, #353535, #fff, #e1e1e1, #353535);
+@include donut-chart('.chart3', 15, 120px, 5px, #e1e1e1, #fff, #353535);
 
-@include donut-chart('.chart4', 39, 240px, 15px, #f26a4a, #fff, #e1e1e1, #f26a4a, 60px);
+@include donut-chart('.chart4', 39, 240px, 15px, #e1e1e1, #fff, #f26a4a, #f26a4a, 60px);
