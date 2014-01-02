@@ -16,7 +16,7 @@ To create Donut Charts, in your main project scss file, just @include the donut-
 <b>Examples</b>
 
 	Standard Chart
-	@include donut-chart('CHART CLASS NAME', PERCENTAGE, CHART SIZE(px), WIDTH OF GRAPH(px), BASE COLOR, CENTER COLOR, GRAPH COLOR);
+	@include donut-chart('CHART CLASS NAME', PERCENTAGE(65), CHART SIZE(200px), WIDTH OF GRAPH(10px), BASE COLOR(#eee), CENTER COLOR(#fff), GRAPH COLOR(#222));
 	
 	Custom Size for Percentage Number in Center
-	@include donut-chart('CHART CLASS NAME', PERCENTAGE, CHART SIZE(px), WIDTH OF GRAPH(px), BASE COLOR, CENTER COLOR, GRAPH COLOR, TEXT COLOR, TEXT SIZE);
+	@include donut-chart('CHART CLASS NAME', PERCENTAGE(65), CHART SIZE(200px), WIDTH OF GRAPH(10px), BASE COLOR(#eee), CENTER COLOR(#fff), GRAPH COLOR(#222), TEXT COLOR(#222), TEXT SIZE(45px));
