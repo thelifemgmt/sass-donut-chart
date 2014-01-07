@@ -52,7 +52,7 @@ Email: thelifemgmt@gmail.com
 	
 	.donut-chart {
 		
-		&#{$name} {
+		&.#{$name} {
 		width: $size;
 		height: $size;
 		background: $base;
